@@ -11,7 +11,7 @@ RapidTriage quickly and automatically collects critical information from key are
 
 = Details =
 
-*_Use Syntax:_*
+*_Usage:_*
 {{{
 python RapidTriage.py [aflnptu] [options] -o <filename>
 
@@ -32,15 +32,6 @@ Options:
 
 *_Tested Python Version:_* 2.7
 
-*_Collects information from the following key OS areas:_*
-  * General System Information
-  * Network Information
-  * Process, Service, and Module Information
-  * Unusual Files, Directories, and Registry Keys
-  * Scheduled Task Information
-  * Account and User Information
-  * Histories and Log Data
-
 *_Tested Operating Systems_*
   * Linux (2.6)
   * OSX (Mountain Lion or newer)
@@ -49,3 +40,42 @@ Options:
 Note: Python is not installed by default in Windows. For suspect Windows systems where Python is not installed considering using the “py2exe” “Distutils” extension to convert RapidTriage into an executable Windows program. Then have the system administrators execute the RapidTriage.exe program to collect the desired information.
 	
 	RapidTriage.exe [aflnptu] [options] -o `<filename>`
+
+*_Changing what is collected and how:_*
+
+Many sections of the script include lists of commands and a description. To add or modify the commands that are used to collect information simply use the following format:
+
+	`<description>::<command>`
+
+Make sure to modify the list corresponding to the appropriate operating type. For example, to modify the network information collected for a Linux system find and change the network "cmds" list using the above syntax:
+
+{{{
+############################################## 
+#
+#	Network Information		     
+#
+##############################################
+	""")
+
+		# Linux, Windows,and OSX Network Related Commands
+		#
+		#	This list can easily be modified to include additional commands. Use 
+		#      the "<description>::<command>" format when adding or modifying.
+		#
+		#	|	|	|
+		#	V	V	V
+		#
+	if os_type is "linux":
+		cmds = [
+		'Network Interface Configuration::ifconfig -a',
+		'Network Interfaces in Promiscuous Mode::ip link |grep PROMISC',
+		'Route Table::netstat -rn',
+		'Firewall Configuration::iptables -L',
+		'ARP Table::arp -e',
+		'Listening Ports and Associated Command::lsof -i',
+		'Active Network Connections::netstat -natp',
+		'Count of Half Open Connections::netstat -ant |grep "svn_recv" |wc -l',
+		'Count of Open Connections::netstat -ant |grep "established" |wc -l',
+		'/etc/hosts Contents::cat /etc/hosts'
+		]
+}}}
