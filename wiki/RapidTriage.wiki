@@ -1,0 +1,52 @@
+#summary One-sentence summary of this page.
+automated intrusion discovery for linux, osx, and windows
+
+= Introduction =
+
+RapidTriage quickly and automatically collects critical information from key areas of the operating system to assist information security incident handlers in determining whether or not there has been compromise. Often this process of collecting information is manual and time consuming particularly when multiple systems are suspect. RapidTriage may be deployed to many systems and the results analyzed relative to each other to help the incident handler prioritize where to focus their containments efforts. Frequently, the incident handler does not have immediate access or authorization to the systems in question and getting it setup can be time consuming. RapidTriage can be quickly provided to authorized system administrators to collect the critical information many times used to help identify a compromise. Beside speed to deploy and overcoming access barriers, the other major benefits of using RapidTriage include:
+
+  # consistency in the data collected across multiple systems and in a uniform output format
+  # a single script for multiple operating systems
+  # easy modification of commands to run or log files to collect
+
+
+= Details =
+
+*_Use Syntax:_*
+{{{
+python RapidTriage.py [aflnptu] [options] -o <filename>
+
+-o <filename> - specified file will contain the results of the RapidTriage
+
+One or more of the following (required):
+  	-a	collect information from all areas
+ 	-f	collect filesystem related information (e.g. unusual files)
+	-l	collect histories and log data
+	-n	collect network statistics and configuration information
+	-p	collect process, service, and module information
+	-t	collect scheduled task information
+	-u	collect user account and configuration information
+}
+Options:
+	-m	Generate an md5 hash of the results file (<filename>) and place in <filename>-hash 
+}}}
+
+*_Tested Python Version:_* 2.7
+
+*_Collects information from the following key OS areas:_*
+  * General System Information
+  * Network Information
+  * Process, Service, and Module Information
+  * Unusual Files, Directories, and Registry Keys
+  * Scheduled Task Information
+  * Account and User Information
+  * Histories and Log Data
+
+*_Tested Operating Systems_*
+  * Linux (2.6)
+  * OSX (Mountain Lion or newer)
+  * Windows (Windows 7 or newer)
+
+Note: Python is not installed by default in Windows. For suspect Windows systems where Python is not installed considering using the “py2exe” “Distutils” extension to convert RapidTriage into an executable Windows program. Then have the system administrators execute the RapidTriage.exe program to collect the desired information.
+	
+	RapidTriage.exe [aflnptu] [options] -o `<filename>`
