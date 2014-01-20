@@ -25,14 +25,15 @@ One or more of the following (required):
 	-p	collect process, service, and module information
 	-t	collect scheduled task information
 	-u	collect user account and configuration information
-}
+
 Options:
 	-m	Generate an md5 hash of the results file (<filename>) and place in <filename>-hash 
 }}}
 
-*_Tested Python Version:_* 2.7
+*_Supported Python Version:_*
+  	2.7
 
-*_Tested Operating Systems_*
+*_Supported Operating Systems_*
   * Linux (2.6)
   * OSX (Mountain Lion or newer)
   * Windows (Windows 7 or newer)
