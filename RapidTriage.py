@@ -1,5 +1,5 @@
 #
-#		IntrusionDiscovery.py
+#		RapidTriage.py
 #		Version: 1.0
 #		Trenton Bond - trent.bond@gmail.com
 #		01-18-2014
