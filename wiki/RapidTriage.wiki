@@ -4,9 +4,11 @@
 
 RapidTriage quickly collects critical information from key areas of the operating system to assist information security incident handlers in determining whether or not there has been compromise. Often this process of collecting information is manual and time consuming particularly when multiple systems are suspect. RapidTriage may be deployed to many systems and the results analyzed relative to each other to help the incident handler prioritize where to focus their containments efforts. Frequently, the incident handler does not have immediate access or authorization to the systems in question and getting it setup can be time consuming. RapidTriage can be quickly provided to authorized system administrators to collect the critical information many times used to help identify a compromise. Beside speed to deploy and overcoming access barriers, the other major benefits of using RapidTriage include:
 
-  # consistency in the data collected across multiple systems and in a uniform output format
-  # a single script for multiple operating systems
-  # easy modification of commands to run or log files to collect
+  # Ability to add/modify collection commands or event sources as necessary
+  # Consistent results and output format
+  # Ability to choose specific operating system areas to collect from
+  # Single collection script to maintain for multiple operating systems
+
 
 
 = Details =
