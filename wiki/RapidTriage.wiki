@@ -43,7 +43,7 @@ Options:
 
 Note: Python is not installed by default in Windows. For suspect Windows systems where Python is not installed considering using the “py2exe” “Distutils” extension to convert RapidTriage into an executable Windows program. Then have the system administrators execute the RapidTriage.exe program to collect the desired information.
 	
-	RapidTriage.exe [aflnptu] [options] -o `<filename>`
+	`RapidTriage.exe [aflnptu] [options] -o <filename>`
 
 *_Changing what is collected and how:_*
 
