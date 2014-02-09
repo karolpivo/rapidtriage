@@ -36,9 +36,9 @@ Options:
   	2.7
 
 *_Supported Operating Systems_*
-  *Linux (2.6.x)
-  *Mac (OSX 10.2.x)
-  *Windows 7
+  * Linux (2.6.x)
+  * Mac (OSX 10.2.x)
+  * Windows 7
 
 
 Note: Python is not installed by default in Windows. For suspect Windows systems where Python is not installed considering using the “py2exe” “Distutils” extension to convert RapidTriage into an executable Windows program. Then have the system administrators execute the RapidTriage.exe program to collect the desired information.
