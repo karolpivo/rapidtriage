@@ -11,32 +11,35 @@ RapidTriage quickly collects critical information from key areas of the operatin
 
 = Details =
 
-*_Usage:_*
 {{{
-python RapidTriage.py [aflnptu] [options] -o <filename>
-
--o <filename> - specified file will contain the results of the RapidTriage
-
-One or more of the following (required):
-  	-a	collect information from all areas
- 	-f	collect filesystem related information (e.g. unusual files)
-	-l	collect histories and log data
-	-n	collect network statistics and configuration information
-	-p	collect process, service, and module information
-	-t	collect scheduled task information
-	-u	collect user account and configuration information
+Usage: python RapidTriage.py [argument(s)] -o <filename>
 
 Options:
-	-m	Generate an md5 hash of the results file (<filename>) and place in <filename>-hash 
+  -h, --help           show this help message and exit
+  -o OUTFILE           specified file will contain the results of RapidTriage
+
+  Arguments (one or more system areas required):
+    -a, --all_areas    collect information from all areas
+    -f, --filesystem   collect filesystem related information
+    -l, --log_events   collect histories and log data
+    -n, --net_stats    collect network stats and config information
+    -p, --process      collect process, service, and module information
+    -t, --sched_tasks  collect scheduled task information
+    -u, --user         collect user account and configuration information
+
+  Optional:
+    -m, --md5sum       generate an md5 hash of the results file (<filename>)
+                       and place in <filename>-hash
 }}}
 
 *_Supported Python Version:_*
   	2.7
 
 *_Supported Operating Systems_*
-  * Linux (2.6)
-  * OSX (Mountain Lion or newer)
-  * Windows (Windows 7 or newer)
+  *Linux (2.6.x)
+  *Mac (OSX 10.2.x)
+  *Windows 7
+
 
 Note: Python is not installed by default in Windows. For suspect Windows systems where Python is not installed considering using the “py2exe” “Distutils” extension to convert RapidTriage into an executable Windows program. Then have the system administrators execute the RapidTriage.exe program to collect the desired information.
 	
