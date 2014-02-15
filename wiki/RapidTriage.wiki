@@ -1,4 +1,4 @@
-#summary automated intrusion discovery for linux, osx, and windows
+#summary automated intrusion discovery for linux, freebsd, osx, and windows
 
 = Introduction =
 
@@ -41,7 +41,7 @@ Options:
   * Linux (2.6.x)
   * Mac (OSX 10.2.x)
   * Windows 7
-
+  * FreeBSD 9
 
 Note: Python is not installed by default in Windows. For suspect Windows systems where Python is not installed considering using the “py2exe” “Distutils” extension to convert RapidTriage into an executable Windows program. Then have the system administrators execute the RapidTriage.exe program to collect the desired information.
 	
