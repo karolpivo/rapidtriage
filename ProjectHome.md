@@ -1,0 +1,1 @@
+RapidTriage quickly collects critical information from key areas of the operating system to assist information security incident handlers in determining whether or not there has been compromise.
