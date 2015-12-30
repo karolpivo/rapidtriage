@@ -55,14 +55,13 @@ Many sections of the script include lists of commands and a description. To add 
 
     <description>::<command>
 
-Make sure to modify the list corresponding to the appropriate operating type. For example, to modify the network information collected for a Linux system find and change the network "cmds" list using the above syntax:
-
+Make sure to modify the list corresponding to the appropriate operating system type. For example, to modify the network information collected for a Linux system find and change the network "cmds" list using the above syntax:
+```
 ############################################## 
 #
 #       Network Information                  
 #
 ##############################################
-        """)
 
                 # Linux, Windows,and OSX Network Related Commands
                 #
@@ -85,3 +84,4 @@ Make sure to modify the list corresponding to the appropriate operating type. Fo
                 'Count of Open Connections::netstat -ant |grep "established" |wc -l',
                 '/etc/hosts Contents::cat /etc/hosts'
                 ]
+```
