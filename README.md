@@ -1,15 +1,20 @@
 # rapidtriage
-Automatically exported from code.google.com/p/rapidtriage
 
+This project was exported from code.google.com/p/rapidtriage due to Google closing down Google Code.
 
-Introduction
+RapidTriage was developed by Trenton Bond - trent.bond@gmail.com. All credits go to Trent.
+
+# Introduction 
 RapidTriage quickly collects critical information from key areas of the operating system to assist information security incident handlers in determining whether or not there has been compromise. Often this process of collecting information is manual and time consuming particularly when multiple systems are suspect. RapidTriage may be deployed to many systems and the results analyzed relative to each other to help the incident handler prioritize where to focus their containments efforts. Frequently, the incident handler does not have immediate access or authorization to the systems in question and getting it setup can be time consuming. RapidTriage can be quickly provided to authorized system administrators to collect the critical information many times used to help identify a compromise. Beside speed to deploy and overcoming access barriers, the other major benefits of using RapidTriage include:
 
-Ability to add/modify collection commands or event sources as necessary
-Consistent results and output format
-Ability to choose specific operating system areas to collect from
-Single collection script to maintain for multiple operating systems
-Details
+- Ability to add/modify collection commands or event sources as necessary
+- Consistent results and output format
+- Ability to choose specific operating system areas to collect from
+- Single collection script to maintain for multiple operating systems
+
+# Details
+
+```
 Usage: python RapidTriage.py [argument(s)] -o <filename>
 
 Options:
@@ -28,23 +33,28 @@ Options:
   Optional:
     -m, --md5sum       generate an md5 hash of the results file (<filename>)
                        and place in <filename>-hash
-Supported Python Version:
+```
 
-2.7
-Supported Operating Systems
+###Supported Python Version: 
 
-Linux (2.6.x)
-Mac (OSX 10.2.x)
-Windows 7
-FreeBSD 9
+- 2.7
+###Supported Operating Systems
+
+- Linux (2.6.x)
+- Mac (OSX 10.2.x)
+- Windows 7
+- FreeBSD 9
+
 Note: Python is not installed by default in Windows. For suspect Windows systems where Python is not installed considering using the “py2exe” “Distutils” extension to convert RapidTriage into an executable Windows program. Then have the system administrators execute the RapidTriage.exe program to collect the desired information.
 
-RapidTriage.exe [aflnptu] [options] -o <filename>
-Changing what is collected and how:
+    RapidTriage.exe [aflnptu] [options] -o <filename>
+
+#Changing what is collected and how:
 
 Many sections of the script include lists of commands and a description. To add or modify the commands that are used to collect information simply use the following format:
 
-<description>::<command>
+    <description>::<command>
+
 Make sure to modify the list corresponding to the appropriate operating type. For example, to modify the network information collected for a Linux system find and change the network "cmds" list using the above syntax:
 
 ############################################## 
